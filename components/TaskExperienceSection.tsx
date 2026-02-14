@@ -126,7 +126,7 @@ export default function TaskExperienceSection({ matchId }: { matchId: string }) 
                                 </div>
 
                                 <p className="text-gray-600 font-medium leading-relaxed italic">
-                                    "{exp.content}"
+                                    &quot;{exp.content}&quot;
                                 </p>
 
                                 {exp.proofUrl && (

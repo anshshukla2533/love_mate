@@ -60,7 +60,7 @@ export default function DashboardPage() {
         }
     };
 
-    const updateMatchAction = async (matchId: string, action: string, extraData: any = {}) => {
+    const updateMatchAction = async (matchId: string, action: string, extraData: Record<string, unknown> = {}) => {
         setActionLoading(true);
         try {
             const res = await fetch(`/api/matches/${matchId}`, {
@@ -140,7 +140,7 @@ export default function DashboardPage() {
                     <h4 className={`${isCompact ? 'text-xl' : 'text-3xl'} font-black mb-2`}>{m.task.title}</h4>
                     {!isCompact && (
                         <p className="text-white/80 font-medium leading-relaxed italic mb-6">
-                            "{m.task.description}"
+                            &quot;{m.task.description}&quot;
                         </p>
                     )}
                 </div>
@@ -376,7 +376,7 @@ export default function DashboardPage() {
                                             <div className="p-8 glass rounded-[3rem] border-rose-100 shadow-xl space-y-4 animate-in fade-in slide-in-from-right-8">
                                                 <h3 className="text-sm font-black text-rose-400 uppercase tracking-widest">Active Focus</h3>
                                                 <div className="p-4 bg-rose-50/50 rounded-2xl border border-rose-100 italic font-medium text-gray-600">
-                                                    "Work with {partner?.name} to {match.task.title.toLowerCase()} and upload your memory here."
+                                                    &quot;Work with {partner?.name} to {match.task.title.toLowerCase()} and upload your memory here.&quot;
                                                 </div>
                                             </div>
                                         )}
@@ -397,7 +397,7 @@ export default function DashboardPage() {
                                     <div className="space-y-4 max-w-2xl mx-auto">
                                         <h2 className="text-5xl md:text-6xl font-black text-gray-800 leading-tight">Searching for Synchronization</h2>
                                         <p className="text-lg text-gray-500 font-medium">
-                                            The hearts are aligning. Ready to find the one who speaks your soul's language?
+                                            The hearts are aligning. Ready to find the one who speaks your soul&apos;s language?
                                         </p>
                                     </div>
 
