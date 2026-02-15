@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { hash } from 'bcrypt';
+import { hash } from 'bcryptjs';
 import { prisma } from '@/lib/prisma';
 
 export async function POST(request: NextRequest) {
@@ -58,10 +58,24 @@ export async function POST(request: NextRequest) {
             user,
             message: 'User registered successfully',
         }, { status: 201 });
-    } catch (error) {
+    } catch (error: unknown) {
         console.error('Registration error:', error);
+        const message = error instanceof Error ? error.message : 'Failed to register user';
+        // Check for common Prisma errors
+        if (message.includes("Can't reach database") || message.includes('connect')) {
+            return NextResponse.json(
+                { error: 'Database connection failed. Please try again later.' },
+                { status: 503 }
+            );
+        }
+        if (message.includes('Unique constraint')) {
+            return NextResponse.json(
+                { error: 'User with this email already exists' },
+                { status: 409 }
+            );
+        }
         return NextResponse.json(
-            { error: 'Failed to register user' },
+            { error: 'Failed to register user. Please try again.' },
             { status: 500 }
         );
     }
