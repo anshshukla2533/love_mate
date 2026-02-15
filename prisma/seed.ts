@@ -1,7 +1,15 @@
 import { PrismaClient } from '@prisma/client';
-import { hash as _hash } from 'bcryptjs';
+import { PrismaNeon } from '@prisma/adapter-neon';
+import { Pool, neonConfig } from '@neondatabase/serverless';
+import ws from 'ws';
 
-const prisma = new PrismaClient();
+// WebSocket for Node.js environment
+neonConfig.webSocketConstructor = ws;
+
+const connectionString = process.env.DATABASE_URL!;
+const pool = new Pool({ connectionString });
+const adapter = new PrismaNeon(pool);
+const prisma = new PrismaClient({ adapter });
 
 const traits = [
     { name: 'Adventure lover' },
