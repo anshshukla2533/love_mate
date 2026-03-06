@@ -1,22 +1,22 @@
-# 🌹 Start Forever
+#  Love _mate
 
 **Start Forever** is a premium, high-aesthetic matchmaking and intimacy-building platform designed to help souls find their perfect rhythm. Built with a "god-level" design philosophy, it focuses on shared experiences, personality alignment, and meaningful connections.
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-- **💘 Vibrational Matching**: Find compatible partners based on your core personality traits and gender preferences.
-- **🛡️ Strict Safety**: Built-in validation ensures matches follow gender-parity rules (Boy/Girl matches only).
-- **📜 Shared Quests**: Embark on curated challenges with your partner to build intimacy.
-- **📸 Proof of Harmony**: Upload memories and proof of work to complete shared tasks.
-- **🌸 Friends Sanctuary**: A dedicated space for your most meaningful connections to persist, complete with chat and ongoing quests.
-- **🎭 Personality Trails**: Deeply integrated trait system that influences recommended tasks and matching accuracy.
-- **💬 Heart Stream**: Real-time chat to keep the conversation flowing.
+- **Vibrational Matching**: Find compatible partners based on your core personality traits and gender preferences.
+- ** Strict Safety**: Built-in validation ensures matches follow gender-parity rules (Boy/Girl matches only).
+- ** Shared Quests**: Embark on curated challenges with your partner to build intimacy.
+- ** Proof of Harmony**: Upload memories and proof of work to complete shared tasks.
+- ** Friends Sanctuary**: A dedicated space for your most meaningful connections to persist, complete with chat and ongoing quests.
+- ** Personality Trails**: Deeply integrated trait system that influences recommended tasks and matching accuracy.
+- ** Heart Stream**: Real-time chat to keep the conversation flowing.
 
 ---
 
-## 🚀 Tech Stack
+##  Tech Stack
 
 - **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
 - **Database**: [Prisma](https://www.prisma.io/) with SQLite
@@ -26,7 +26,7 @@
 
 ---
 
-## 🛠️ Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -70,7 +70,7 @@
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 - `app/api/`: Backend routes for matches, friends, traits, and tasks.
 - `components/`: Reusable UI components including `ChatRoom` and `RecommendedTasks`.
