@@ -1,6 +1,6 @@
 #  Love _mate
 
-**Start Forever** is a premium, high-aesthetic matchmaking and intimacy-building platform designed to help souls find their perfect rhythm. Built with a "god-level" design philosophy, it focuses on shared experiences, personality alignment, and meaningful connections.
+**love_mate** is a premium, high-aesthetic matchmaking and intimacy-building platform designed to help souls find their perfect rhythm. Built with a "god-level" design philosophy, it focuses on shared experiences, personality alignment, and meaningful connections.
 
 ---
 
